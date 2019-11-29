@@ -23,6 +23,7 @@ public class StockConsumer implements MessageListener {
 	@Override
 	public void onMessage(Message message) {
 		TextMessage mapMessage = (TextMessage) message;
+		LOG.info("-----------------------------------------------------------------");
 		LOG.info("Got a TextMessage to '" + agentProperties.getType() + "' Stocks");
 		try {
 			LOG.info("Message info: " + mapMessage.getText());

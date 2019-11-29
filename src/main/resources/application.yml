@@ -8,4 +8,4 @@ spring:
 server:
   port: 0
 agent:
-  type: buy
+  type: Buy

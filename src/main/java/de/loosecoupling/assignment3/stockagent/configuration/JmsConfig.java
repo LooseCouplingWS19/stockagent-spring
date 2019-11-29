@@ -31,8 +31,6 @@ public class JmsConfig {
 	private StockConsumer stockConsumer;
 	@Autowired
 	private AgentProperties agentProperties;
-	
-	private final String clientId = "StockSubscriber-1";
 
 	@Bean
 	public QueueConnectionFactory activeMQConnectionFactory() {
@@ -47,7 +45,6 @@ public class JmsConfig {
 	@Bean
 	public QueueConnection activeMQConnection(QueueConnectionFactory activeMQConnectionFactory) throws JMSException {
 		QueueConnection activeMQConnection = activeMQConnectionFactory.createQueueConnection();
-		activeMQConnection.setClientID(clientId);
 		activeMQConnection.start();
 		return activeMQConnection;
 	}

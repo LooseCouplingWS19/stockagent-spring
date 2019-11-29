@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: stockagent
+  activemq:
+    user: admin
+    password: admin
+    broker-url: tcp://localhost:61616
+server:
+  port: 0
